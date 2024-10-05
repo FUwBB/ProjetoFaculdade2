@@ -1,13 +1,24 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>terceira</ion-title>
+    <ion-title>Vote em Cachorros</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">terceira</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <div id="vote-options" class="vote-options">
+    <ion-button (click)="vote(1)">Vote Up</ion-button>
+    <ion-button (click)="vote(-1)">Vote Down</ion-button>
+    <ion-button (click)="showHistoricVotes()">Histórico</ion-button>
+    
+    <div>
+      <img id="image-to-vote-on" class="col-lg lazy" alt="Vote on this dog" data-src="" />
+    </div>
+  </div>
+
+  <div id="vote-results" class="vote-results" style="display:none;">
+    <ion-button (click)="showVoteOptions()">Mostrar Opções de Voto</ion-button>
+    <div id="grid" class="imgrid"></div>
+  </div>
 </ion-content>
+
+<br> <ion-button color="dark"><a [routerLink]="['/tela']"> Tela inicial </a></ion-button>

@@ -11,5 +11,6 @@ export class TelaPage implements OnInit {
 
   ngOnInit() {
   }
-
+  
 }
+
