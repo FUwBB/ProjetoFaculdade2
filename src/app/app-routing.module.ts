@@ -8,8 +8,20 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'tela',
     pathMatch: 'full'
+  },
+  {
+    path: 'tela',
+    loadChildren: () => import('./pages/tela/tela.module').then( m => m.TelaPageModule)
+  },
+  {
+    path: 'segunda',
+    loadChildren: () => import('./pages/segunda/segunda.module').then( m => m.SegundaPageModule)
+  },
+  {
+    path: 'terceira',
+    loadChildren: () => import('./pages/terceira/terceira.module').then( m => m.TerceiraPageModule)
   },
 ];
 
